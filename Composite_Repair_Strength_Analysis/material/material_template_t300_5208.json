@@ -1,0 +1,106 @@
+{
+  "_warning": "Demonstration parameters for workflow verification only. Calibrate against the actual laminate and adhesive before engineering use.",
+  "_units": {
+    "length": "mm",
+    "force": "N",
+    "stress": "MPa",
+    "density": "tonne/mm^3",
+    "fracture_energy": "N/mm"
+  },
+  "_base_material": "Typical T300/5208 carbon/epoxy reference set",
+  "material": {
+    "base": {
+      "density": 1.54e-09,
+      "depvar": 90,
+      "data": [
+        181000.0,
+        10300.0,
+        10300.0,
+        0.28,
+        0.28,
+        0.4,
+        7170.0,
+        7170.0,
+        3678.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1500.0,
+        1500.0,
+        40.0,
+        246.0,
+        40.0,
+        246.0,
+        1.0,
+        1.0,
+        68.0,
+        68.0,
+        68.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        91.6,
+        79.9,
+        0.22,
+        1.1,
+        0.26
+      ]
+    },
+    "adhesive": {
+      "density": 1.2e-09,
+      "_engineeringElastic_note": "E (MPa) and Poisson ratio used by the final plug-in for the finite-thickness linear-elastic solid adhesive.",
+      "engineeringElastic": [
+        3000.0,
+        0.35
+      ],
+      "elastic": [
+        1000000.0,
+        1000000.0,
+        1000000.0
+      ],
+      "qd": [
+        50.0,
+        80.0,
+        80.0
+      ],
+      "power": 1.45,
+      "de": [
+        0.26,
+        1.002,
+        1.002
+      ],
+      "_legacy_fields_note": "elastic, qd, power and de are retained only for backward compatibility with older material files. V2.1.3 Final does not use them for adhesive damage."
+    },
+    "cohesiveZero": {
+      "density": 1.2e-09,
+      "_solidElastic_note": "Demonstration elastic constants for the 3-D staircase adhesive volume; replace with measured adhesive data.",
+      "solidElastic": [
+        3000.0,
+        0.35
+      ],
+      "elastic": [
+        1000000.0,
+        1000000.0,
+        1000000.0
+      ],
+      "qd": [
+        50.0,
+        80.0,
+        80.0
+      ],
+      "power": 1.45,
+      "de": [
+        0.26,
+        1.002,
+        1.002
+      ],
+      "_status_note": "Legacy compatibility block. The final plug-in uses adhesive/engineeringElastic for all three repair types and does not create a zero-thickness cohesive layer."
+    }
+  }
+}

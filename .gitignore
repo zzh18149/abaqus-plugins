@@ -1,0 +1,40 @@
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Local validation, archives and generated solver data
+.codex_checks/
+**/jobs/
+**/validation/
+*.zip
+*.odb
+*.sim
+*.cae
+*.res
+*.stt
+*.mdl
+*.abq
+*.pac
+*.prt
+*.sel
+*.dat
+*.msg
+*.sta
+*.lck
+*.log
+*.rec
+*.rpy*
+*.jnl
+*.com
+*.inp
+*.simdir/
+
+# Local secrets and OS/editor files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db
+.vscode/

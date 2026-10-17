@@ -1,0 +1,26 @@
+材料参数JSON快速填写说明
+========================
+
+最简单的做法：复制 material_template_t300_5208.json 后另存为新文件。
+
+日常通常只修改：
+1. material/base/density
+2. material/base/data 中的实际材料常数
+3. material/adhesive/density
+4. material/adhesive/engineeringElastic = [E, nu]
+
+base/data 主要位置：
+1 E1, 2 E2, 3 E3, 4 nu12, 5 nu13, 6 nu23,
+7 G12, 8 G13, 9 G23, 10 beta, 11 alpha, 12 gama,
+17 X_t, 18 X_c, 19 Y_t, 20 Y_c, 21 Z_t, 22 Z_c,
+25 S12, 26 S13, 27 S23,
+33 G_ft, 34 G_fc, 35 G_mt, 36 G_mc, 37 G_del.
+
+保留不动：
+- base/depvar = 90
+- data 13-16, 23-24, 28-32
+- adhesive/elastic, qd, power, de（格式兼容字段）
+
+单位：mm, N, MPa, tonne/mm^3, N/mm。
+
+插件当前实体胶层实际使用 engineeringElastic 中的 E 和 nu。

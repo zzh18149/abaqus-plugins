@@ -1,0 +1,3 @@
+Composite Repair Strength Analysis
+Version: V2.2.0 Python 3 Migration
+Target: Abaqus/CAE 2024 / Python 3.10.5
